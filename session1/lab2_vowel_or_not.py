@@ -11,7 +11,6 @@ def vowel(letter):
 
     # Check if the letter is in the set of vowels
     return letter in vowels
-    
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"

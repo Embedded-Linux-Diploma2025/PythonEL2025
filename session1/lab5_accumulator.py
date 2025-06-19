@@ -3,7 +3,18 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
+    if not isinstance(number, int):
+        raise TypeError("Input 'number' must be an integer.")
+    if number < 0:
+        raise ValueError("Input 'number' cannot be negative. Please provide a non-negative integer.")
 
+    running_sum = 0
+    print("Running Total:")
+    for i in range(1, number + 1):
+        running_sum += i
+        print(f"  Adding {i}: Current total = {running_sum}")
+    
+    return running_sum
 
 if __name__ == "__main__":
     assert compute(5) == 15, "Test case failed"
