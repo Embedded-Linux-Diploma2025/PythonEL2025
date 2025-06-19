@@ -10,10 +10,8 @@ def vowel(letter):
     vowels = {'a', 'e', 'i', 'o', 'u'}
 
     # Check if the letter is in the set of vowels
-    if letter in vowels:
-        return True
-    else:
-        return False
+    return letter in vowels
+    
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
