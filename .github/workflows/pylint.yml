@@ -21,3 +21,14 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+    - name: Run python scripts
+      run: |
+        cd session1
+        for file in $(ls *.py); do
+          python $file
+          if [ $? -ne 0 ]; then
+            echo "[🟥] Error running $file"
+            exit 1
+          fi
+          echo "[🟩] $file ran successfully"
+        done
