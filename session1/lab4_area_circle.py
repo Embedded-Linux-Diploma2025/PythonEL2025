@@ -11,7 +11,7 @@ def area(radius):
     if radius < 0:
         raise ValueError("Radius cannot be negative.")
     c_area = math.pi * (radius ** 2)
-    return c_area 
+    return c_area
 
 if __name__ == "__main__":
     assert area(2) == 12.566370614359172, "Test case failed"
