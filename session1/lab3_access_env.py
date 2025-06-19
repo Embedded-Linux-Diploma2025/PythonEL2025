@@ -5,6 +5,17 @@ import os
 
 def access_env(env_var):
     """Write your solution here. Don't forget to return the result at the end."""
+    """
+    Retrieves the value of a specific environment variable.
+
+    Args:
+        var_name (str): The name of the environment variable to retrieve.
+
+    Returns:
+        str or None: The value of the environment variable if found,
+                     otherwise None.
+    """
+    return os.getenv(env_var)
 
 
 if __name__ == "__main__":

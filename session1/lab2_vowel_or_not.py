@@ -3,7 +3,17 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
+ # Convert the letter to lowercase to handle both 'A' and 'a'
+    letter = letter.lower()
 
+    # Define the set of vowels
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+
+    # Check if the letter is in the set of vowels
+    if letter in vowels:
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
