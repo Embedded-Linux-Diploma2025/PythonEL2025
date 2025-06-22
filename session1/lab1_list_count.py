@@ -3,6 +3,7 @@
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end."""
+    return len(list(filter(lambda num: num == 4, lst)))
 
 
 if __name__ == "__main__":
