@@ -3,7 +3,10 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
-
+    ret_val = 0
+    for i in range(1, number+1):
+        ret_val += i
+    return ret_val
 
 if __name__ == "__main__":
     assert compute(5) == 15, "Test case failed"

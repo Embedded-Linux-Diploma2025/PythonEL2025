@@ -1,9 +1,11 @@
 """Write a Python program to test whether a passed letter is a vowel or not."""
+from typing import List
 
+vList: List = ["a", "e", "i", "o", "u", "A", "E" ,"I" ,"O" , "U"]
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-
+    return letter in vList
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
