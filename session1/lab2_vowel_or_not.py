@@ -1,8 +1,17 @@
 """Write a Python program to test whether a passed letter is a vowel or not."""
 
 
+
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
+    ret = False
+    st = ["u","e","o","i","a"]
+    if letter.lower() in st :
+        ret = True
+    return ret
+
+
+
 
 
 if __name__ == "__main__":

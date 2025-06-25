@@ -5,6 +5,9 @@ import os
 
 def access_env(env_var):
     """Write your solution here. Don't forget to return the result at the end."""
+    env = os.getenv(env_var)
+    return env
+
 
 
 if __name__ == "__main__":
