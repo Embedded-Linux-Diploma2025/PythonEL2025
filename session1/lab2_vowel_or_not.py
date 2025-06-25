@@ -3,7 +3,8 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    return letter in ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    vow ="aeuioAEUIO"
+    return letter in vow
 
 
 if __name__ == "__main__":
