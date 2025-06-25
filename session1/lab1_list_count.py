@@ -4,13 +4,7 @@
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end."""
-    x = 4
-    counter = 0
-    n = len(lst)
-    for i in range(n):
-        if lst[i] == x:
-            counter = counter + 1
-    return counter
+    return lst.count(4)
 
 
 
