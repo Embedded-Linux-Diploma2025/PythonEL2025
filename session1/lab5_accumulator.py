@@ -9,10 +9,10 @@ def compute(number):
         print(f"Running total after adding {number}: {sum_1}")
     else :
         while number != 0:
-          sum_1 = sum_1 + i
-          print(f"Running total after adding {i}: {sum_1}")
-          number = number - 1
-          i=i+1
+            sum_1 = sum_1 + i
+            print(f"Running total after adding {i}: {sum_1}")
+            number = number - 1
+            i=i+1
     return sum_1
 
 if __name__ == "__main__":
