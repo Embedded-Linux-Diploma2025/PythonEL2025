@@ -1,8 +1,11 @@
 """Sum 1 … n — Compute and display the running total."""
 
-
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
+    y = 0
+    for i in range(number + 1) :
+        y += i
+    return y
 
 
 if __name__ == "__main__":
