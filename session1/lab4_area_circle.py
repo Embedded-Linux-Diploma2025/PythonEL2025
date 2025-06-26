@@ -6,7 +6,7 @@ def area(number1):
     Write a Python program which accepts the radius of a circle from the argument
     and compute the area. Don't forget to return the result at the end.
     """
-
+    return 3.141592653589793 * (number1 ** 2)
 
 if __name__ == "__main__":
     assert area(2) == 12.566370614359172, "Test case failed"
