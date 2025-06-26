@@ -2,7 +2,9 @@
 
 
 def vowel(letter):
-    """Write your solution here. Don't forget to return the result at the end."""
+    """ vowel found --> return true"""
+    vowels = {"a", "e", "i", "o", "u"}
+    return letter.lower() in vowels
 
 
 if __name__ == "__main__":
