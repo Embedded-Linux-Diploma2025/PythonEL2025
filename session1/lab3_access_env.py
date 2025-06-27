@@ -5,8 +5,9 @@ import os
 
 def access_env(env_var):
     """Write your solution here. Don't forget to return the result at the end."""
-    env_var = os.environ["PATH"]
-    return env_var
+    var_1 = env_var
+    val_1 = os.environ.get(var_1)
+    return val_1
 
 if __name__ == "__main__":
     os.environ["TEST1234"] = "test_value"
