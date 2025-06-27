@@ -3,6 +3,10 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
+    # define a set of vowels
+    set_vowel = {'a', 'A', 'e', 'E', 'o', 'O', 'u', 'U', 'i', 'I'}
+    # return true if letter is vowel
+    return letter in set_vowel
 
 
 if __name__ == "__main__":
