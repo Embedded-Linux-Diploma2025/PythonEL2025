@@ -1,6 +1,7 @@
 """Sum 1 … n — Compute and display the running total."""
 
 
+
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
     total = sum(range(1,number+1))
