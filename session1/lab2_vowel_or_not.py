@@ -7,8 +7,6 @@ def vowel(letter):
     vowel_found_flag = False
     if letter in vowels:
         vowel_found_flag = True
-    else:
-        vowel_found_flag = False
     return vowel_found_flag
 
 if __name__ == "__main__":
