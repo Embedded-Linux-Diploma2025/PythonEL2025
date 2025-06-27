@@ -3,14 +3,7 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    # vowel_list = ['a', 'e', 'i', 'o', 'u']
-    # if str(letter).isupper:
-    #     print(letter + " is upper case") # prints a is upper case!
-    #     return str(letter).lower in vowel_list
-    # else:
-    #     print(letter + " is lower case")
-    #     return str(letter) in vowel_list
-    return letter in ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    return str(letter).lower() in 'aeiou'
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"

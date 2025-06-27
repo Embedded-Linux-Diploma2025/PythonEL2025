@@ -1,13 +1,12 @@
 """Write a Python program which accepts the radius of a circle and compute the area."""
 
-
 def area(number1):
     """
     Write a Python program which accepts the radius of a circle from the argument
     and compute the area. Don't forget to return the result at the end.
     """
-    return number1**2*3.141592653589793
-    # print(number1**2)
+    pi_const = 3.141592653589793
+    return number1**2*pi_const
 
 
 if __name__ == "__main__":
