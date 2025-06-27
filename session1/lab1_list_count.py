@@ -2,7 +2,12 @@
 
 
 def count(lst):
-    """Write your solution here. Don't forget to return the result at the end."""
+    """Count how many times number 4 appears in the given list."""
+    result = 0
+    for i in lst:
+        if i == 4:
+            result +=1
+    return result 
 
 
 if __name__ == "__main__":
