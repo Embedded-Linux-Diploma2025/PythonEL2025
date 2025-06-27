@@ -2,9 +2,9 @@
 
 
 def vowel(letter):
-    """Write your solution here. Don't forget to return the result at the end."""
-    vowel_num = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-    return letter in vowel_num
+    if letter in ['a','A','e','E','i','I','o','O','u','U']:
+        return True
+    return False
 
 
 

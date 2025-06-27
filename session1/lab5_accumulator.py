@@ -2,11 +2,14 @@
 
 
 def compute(number):
-    """write your soulution Here Sum 1 … n — Compute and display the running total."""
-    total = 0
-    for i in range(1,number +1):
-        total = total + i
-    return total
+    counter=1
+    total=0
+    i=0
+    while i<number:
+        total+=counter
+        counter+=1
+        i+=1
+    return total    
 
 
 if __name__ == "__main__":
