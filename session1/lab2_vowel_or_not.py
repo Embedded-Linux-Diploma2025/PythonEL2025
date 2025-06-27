@@ -3,11 +3,9 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    VowelNum = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-    if letter in VowelNum:
-        return True
-    else:
-        return False 
+    vowel_num = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    return letter in vowel_num
+    
 
 
 if __name__ == "__main__":
