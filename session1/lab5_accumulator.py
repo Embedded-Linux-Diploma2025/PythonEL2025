@@ -3,6 +3,12 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
+    if number < 0:
+        raise ValueError("Number must be non-negative")
+    total = 0
+    for i in range(1, number + 1):
+        total += i
+    return total
 
 
 if __name__ == "__main__":
