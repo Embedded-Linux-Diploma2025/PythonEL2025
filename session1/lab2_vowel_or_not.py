@@ -3,6 +3,10 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
+    if letter == 'a' or letter == 'i' or letter == 'u' or letter == 'o' or letter == 'e' or letter == 'A' or letter == 'I' or letter == 'U' or letter == 'O' or letter == 'E':
+        return True
+    else:
+        return False 
 
 
 if __name__ == "__main__":
