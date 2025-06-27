@@ -3,6 +3,10 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
+    # return (True if len(letter) == 1  and letter.lower() in 'aeiou' else False)
+    assert len(letter) == 1 , "You not passed letter "
+    assert letter.lower() in 'aeiou' , f"{letter} : This letter is not a vowel letter"
+    return True
 
 
 if __name__ == "__main__":
