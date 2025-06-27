@@ -3,8 +3,13 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    vowel_list=["A","E","I","O","U","a","e","i","o","u"]
-    return letter in vowel_list
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    vowel_found_flag = False
+    if letter in vowels:
+        vowel_found_flag = True
+    else:
+        vowel_found_flag = False
+    return vowel_found_flag
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
