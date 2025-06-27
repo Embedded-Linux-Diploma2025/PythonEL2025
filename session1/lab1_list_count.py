@@ -1,9 +1,16 @@
 """Write a Python program to count the number 4 in a given list."""
-
+#def count(lst):
+    # Count the number of times 4 appears in the list
+    # return count_of_num
+    #return return lst.count(4)
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end."""
-
+    n_counter=0
+    for val in lst:
+        if val ==4:
+            n_counter+=1
+    return n_counter
 
 if __name__ == "__main__":
     assert count([1, 2, 3, 4, 5, 4, 6]) == 2, "Test case failed"
