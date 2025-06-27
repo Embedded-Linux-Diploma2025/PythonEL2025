@@ -2,7 +2,8 @@
 
 
 def count(lst):
-    """Write your solution here. Don't forget to return the result at the end...."""
+    """Write your solution here. Don't forget to return the result at the end."""
+    return list.count(lst, 4)
 
 
 if __name__ == "__main__":
