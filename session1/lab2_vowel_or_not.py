@@ -3,7 +3,8 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    if letter == 'a' or letter == 'i' or letter == 'u' or letter == 'o' or letter == 'e' or letter == 'A' or letter == 'I' or letter == 'U' or letter == 'O' or letter == 'E':
+    VowelNum = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    if letter in VowelNum:
         return True
     else:
         return False 
