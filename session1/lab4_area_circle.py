@@ -2,8 +2,8 @@
 
 
 def area(number1):
-     """calculation of the area of a circle"""
-     return (number1**2)*3.14159
+    """calculation of the area of a circle"""
+    return (number1**2)*3.14159
 
 
 if __name__ == "__main__":
