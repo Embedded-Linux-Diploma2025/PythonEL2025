@@ -1,10 +1,11 @@
+#!/usr/bin/python3
 """Write a Python program to test whether a passed letter is a vowel or not."""
 
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-
-
+    v = ["a","e","i","o","u","A","E","I","O","U"]
+    return letter in v
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
     assert not vowel("b"), "Test case failed"

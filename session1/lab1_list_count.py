@@ -1,9 +1,14 @@
+#!/usr/bin/python3
 """Write a Python program to count the number 4 in a given list."""
 
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end...."""
-
+    cnt=0
+    for x in lst :
+        if x == 4:
+            cnt+=1
+    return cnt
 
 if __name__ == "__main__":
     assert count([1, 2, 3, 4, 5, 4, 6]) == 2, "Test case failed"
