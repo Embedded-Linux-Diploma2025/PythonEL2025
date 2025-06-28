@@ -5,7 +5,7 @@ def vowel(letter):
    """docstring?"""
     if letter in "AEIOUaeiou":
         return True
-    else
+    else:
         return False
 
 
