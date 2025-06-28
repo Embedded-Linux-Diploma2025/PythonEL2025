@@ -3,9 +3,9 @@
 
 def compute(number):
     total: int = 0
-   for i in range(1,number+1) #put the number+1 to make the range including number
-    total += i
-return total
+        for i in range(1,number+1) #put the number+1 to make the range including number
+            total += i
+    return total
 
 
 if __name__ == "__main__":
