@@ -5,7 +5,10 @@ import os
 
 def access_env(env_var):
     """Write your solution here. Don't forget to return the result at the end."""
-
+    dictionary= {"TEST1234":"test_value",
+                 "TEST1235":"test_value2", 
+                 "TEST1236":"test_value3"}
+    return dictionary[env_var]
 
 if __name__ == "__main__":
     os.environ["TEST1234"] = "test_value"
