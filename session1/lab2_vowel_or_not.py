@@ -2,7 +2,10 @@
 
 
 def vowel(letter):
-    """Write your solution here. Don't forget to return the result at the end."""
+   if letter in "AEIOUaeiou":
+        return True
+    else
+        return False
 
 
 if __name__ == "__main__":
