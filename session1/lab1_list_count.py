@@ -1,7 +1,7 @@
 """Write a Python program to count the number 4 in a given list."""
 
 def count(lst):
-    """docstring?"""
+    """here the function checks for the number of times 4 has occurred in a list"""
     mycounter: int=0
     for i in lst:
         if i==4:
