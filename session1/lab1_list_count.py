@@ -1,6 +1,6 @@
 """Write a Python program to count the number 4 in a given list."""
 
-
+"""Just documentation for pylint"""
 def count(lst):
    mycounter: int=0
    for i in lst:
