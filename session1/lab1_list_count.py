@@ -1,11 +1,11 @@
 """Write a Python program to count the number 4 in a given list."""
 
-"""Just documentation for pylint"""
 def count(lst):
+    """docstring?"""
     mycounter: int=0
     for i in lst:
-       if i==4:
-         mycounter +=1
+        if i==4:
+            mycounter +=1
     return mycounter
 
 
