@@ -3,10 +3,10 @@
 
 def vowel(letter):
    """docstring?"""
-        if letter in "AEIOUaeiou":
-            return True
-        else
-            return False
+    if letter in "AEIOUaeiou":
+        return True
+    else
+        return False
 
 
 if __name__ == "__main__":
