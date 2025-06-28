@@ -3,7 +3,7 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
-    print("running total of num = ", number, ": ", sum(range(1, number+1)))
+    # print("running total of num = ", number, ": ", sum(range(1, number+1)))
     return sum(range(1, number + 1))
 
 
