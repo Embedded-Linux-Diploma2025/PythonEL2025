@@ -3,7 +3,8 @@
 
 def vowel(letter):
     """docstring?"""
-    if letter in "AEIOUaeiou":
+    key:str = "AEIOUaeiou"
+    if letter in key:
         return True
 
     return False
