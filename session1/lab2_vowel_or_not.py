@@ -1,10 +1,8 @@
 """Write a Python program to test whether a passed letter is a vowel or not."""
-"""a function to check if the input is a vowel"""
 
 def vowel(letter):
-    """docstring?"""
-    key:str = "AEIOUaeiou"
-    if letter in key:
+    """Function checking for the presence of a letter in a vowel string"""
+    if letter in "AEIOUaeiou:
         return True
 
     return False
