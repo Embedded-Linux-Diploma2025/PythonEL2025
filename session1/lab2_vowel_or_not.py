@@ -1,5 +1,5 @@
 """Write a Python program to test whether a passed letter is a vowel or not."""
-
+"""a function to check if the input is a vowel"""
 
 def vowel(letter):
     """docstring?"""
