@@ -4,8 +4,8 @@ import os
 
 
 def access_env(env_var):
-    """"docstring for pylint"""
-    return os.environ(env_var)
+    """just a function that accesses environment variables"""
+    return os.environ[env_var]
 
 
 if __name__ == "__main__":
