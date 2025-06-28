@@ -4,7 +4,7 @@
 def compute(number):
     """return the total summation of the number and all the numbers less than it"""
     total: int = 0
-        for i in range(1,number+1) #put the number+1 to make the range including number
+    for i in range(1,number+1) #put the number+1 to make the range including number
             total += i
     return total
 
