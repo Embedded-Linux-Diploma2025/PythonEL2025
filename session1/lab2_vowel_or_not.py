@@ -2,7 +2,7 @@
 
 def vowel(letter):
     """Function checking for the presence of a letter in a vowel string"""
-    if letter in "AEIOUaeiou:
+    if letter in "AEIOUaeiou":
         return True
 
     return False
