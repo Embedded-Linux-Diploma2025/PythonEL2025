@@ -5,6 +5,9 @@ import requests
 
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
+    respond=requests.get('https://ipinfo.io/json',timeout=1)
+    data=respond.json()
+    return data
 
 
 if __name__ == "__main__":
