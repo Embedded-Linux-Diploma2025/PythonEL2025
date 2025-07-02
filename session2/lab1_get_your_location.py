@@ -5,6 +5,15 @@ import requests
 
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
+    response = requests.get("https://ipinfo.io/json",timeout=10)
+    data = response.json()
+    # print(f"IP: {data.get('ip')}")
+    # print(f"City: {data.get('city')}")
+    # print(f"Region: {data.get('region')}")
+    # print(f"Country: {data.get('country')}")
+    # print(f"Location: {data.get('loc')}")
+    # print(f"Org: {data.get('org')}")
+    return data
 
 
 if __name__ == "__main__":
