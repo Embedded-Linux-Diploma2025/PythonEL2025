@@ -16,7 +16,7 @@ for file in *.py; do
 done
 #----------------- Session 2 -----------------#
 cd ../session2 || exit 1
-# python3 lab1_get_your_location.py || exit 0
+python lab1_get_your_location.py || exit 0
 for file in *.py; do
     pylint "$file"
     if [ $? -ne 0 ]; then
