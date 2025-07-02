@@ -3,10 +3,7 @@
 V_L='aeiouAEIOU'
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    if letter in V_L :
-        return True
-    else:
-        return False
+    return bool(letter in V_L)
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
