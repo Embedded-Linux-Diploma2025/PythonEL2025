@@ -30,6 +30,9 @@ def find_unique_elements(list1, list2):
     """
     # Write your solution here
 
+    
+   
+
 def remove_vowels_set(text):
     """Remove vowels from text using set operations.
 
@@ -40,11 +43,8 @@ def remove_vowels_set(text):
         str: Text with vowels removed
     """
     # Write your solution here
- 
     vowels={'a','e','i','o','u'}
- 
     return [s for s in text if s not in str(vowels)]
-print(remove_vowels_set("Hello World"))
  
 
 # if __name__ == "__main__":

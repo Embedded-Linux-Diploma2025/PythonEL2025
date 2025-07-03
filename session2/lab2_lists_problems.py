@@ -13,17 +13,11 @@ def find_max_min(numbers):
     min_value=numbers[0]
     max_value=numbers[0]
     for i in numbers:
-        if(i<min_value):
+        if i<min_value:
             min_value=i
-        elif(i>max_value):
+        elif i>max_value :
             max_value=i
-        
     return (min_value,max_value)
-
-
-
- 
-
 
 def reverse_list(items):
     """Reverse a list without using built-in reverse() method.
