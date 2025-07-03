@@ -55,8 +55,8 @@ def list_statistics(numbers):
     """
     # Write your solution here
     sum=0
-    for i in range(0,len(numbers)):
-        sum+=numbers[i]
+    for i in numbers:
+        sum+=i
         print(sum)
     return {"sum": sum, "average": sum/len(numbers), "count": len(numbers)}
 
