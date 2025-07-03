@@ -3,6 +3,13 @@
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end...."""
+    given_list  = list(map(int, input("Please give a list with a space: ").split()))
+    counter = 0
+    for i in given_list :
+        if i == 4:
+            counter+=1
+    print(counter)
+    return counter
 
 
 if __name__ == "__main__":
