@@ -3,7 +3,21 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-
+    letter = input("please enter a letter to check if it is vowel or not:  ")
+    vowel_letters = ('a', 'e', 'o', 'u', 'i')
+    result: bool = False
+    if letter.lower() in vowel_letters:
+        print("letter " + letter + " is vowel")
+        result = True
+    elif letter.lower() not in vowel_letters:
+        print("letter " + letter + " is not vowel")
+        result = False
+    elif not letter.isalpha():
+        print("please enter a valid letter")
+        result =  None
+    else:
+        print("something wrong try again")
+    return result
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
