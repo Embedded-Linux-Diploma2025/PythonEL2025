@@ -64,32 +64,32 @@ def tuple_indexing_slicing(data_tuple):
 
 print(tuple_indexing_slicing((0, 1, 2, 3, 4, 5, 6, 7, 8, 9)))
 
-# if __name__ == "__main__":
-#     # Test cases
-#     print("Testing tuple_operations...")
-#     result = tuple_operations((1, 2, 3), (3, 4, 5))
-#     expected_keys = {"concatenation", "repetition"}
-#     expected = {"concatenation": (1, 2, 3, 3, 4, 5), "repetition": (1, 2, 3, 1, 2, 3)}
-#     assert result == expected, f"Expected {expected}, got {result}"
-#     assert result["concatenation"] == (1, 2, 3, 3, 4, 5), (
-#         f"Expected concatenation (1, 2, 3, 3, 4, 5), got {result['concatenation']}"
-#     )
-#     assert result["repetition"] == (1, 2, 3, 1, 2, 3), "Expected repetition (1, 2, 3, 1, 2, 3)"
-#     assert set(result.keys()) == expected_keys, f"Expected keys {expected_keys}"
+if __name__ == "__main__":
+    # Test cases
+    print("Testing tuple_operations...")
+    result = tuple_operations((1, 2, 3), (3, 4, 5))
+    expected_keys = {"concatenation", "repetition"}
+    expected = {"concatenation": (1, 2, 3, 3, 4, 5), "repetition": (1, 2, 3, 1, 2, 3)}
+    assert result == expected, f"Expected {expected}, got {result}"
+    assert result["concatenation"] == (1, 2, 3, 3, 4, 5), (
+        f"Expected concatenation (1, 2, 3, 3, 4, 5), got {result['concatenation']}"
+    )
+    assert result["repetition"] == (1, 2, 3, 1, 2, 3), "Expected repetition (1, 2, 3, 1, 2, 3)"
+    assert set(result.keys()) == expected_keys, f"Expected keys {expected_keys}"
 
-#     print("Testing find_tuple_stats...")
-#     result = find_tuple_stats((1, 5, 3, 9, 2))
-#     assert result == (20, 9, 1, 5), f"Expected (20, 9, 1, 5), got {result}"
+    print("Testing find_tuple_stats...")
+    result = find_tuple_stats((1, 5, 3, 9, 2))
+    assert result == (20, 9, 1, 5), f"Expected (20, 9, 1, 5), got {result}"
 
-#     print("Testing count_elements_in_tuple...")
-#     result = count_elements_in_tuple((1, 2, 3, 2, 4, 2), 2)
-#     assert result == 3, f"Expected 3, got {result}"
+    print("Testing count_elements_in_tuple...")
+    result = count_elements_in_tuple((1, 2, 3, 2, 4, 2), 2)
+    assert result == 3, f"Expected 3, got {result}"
 
-#     print("Testing tuple_indexing_slicing...")
-#     result = tuple_indexing_slicing((0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
-#     assert "first_element" in result, "Should contain first_element"
-#     assert "last_element" in result, "Should contain last_element"
-#     assert result["first_element"] == 0, f"Expected first_element 0, got {result['first_element']}"
-#     assert result["last_element"] == 9, f"Expected last_element 9, got {result['last_element']}"
+    print("Testing tuple_indexing_slicing...")
+    result = tuple_indexing_slicing((0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+    assert "first_element" in result, "Should contain first_element"
+    assert "last_element" in result, "Should contain last_element"
+    assert result["first_element"] == 0, f"Expected first_element 0, got {result['first_element']}"
+    assert result["last_element"] == 9, f"Expected last_element 9, got {result['last_element']}"
 
-#     print("All tests passed!")
+    print("All tests passed!")
