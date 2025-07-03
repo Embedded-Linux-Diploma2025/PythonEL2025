@@ -7,11 +7,6 @@ def area(number1):
     and compute the area. Don't forget to return the result at the end.
     """
     return math.pi*number1*number1
-<<<<<<< HEAD
-=======
-
->>>>>>> 8b115b57c63b9b2f53eb834aaa24f5d16cfb7fe6
-
 if __name__ == "__main__":
     assert area(2) == 12.566370614359172, "Test case failed"
     assert area(1) == 3.141592653589793, "Test case failed"
