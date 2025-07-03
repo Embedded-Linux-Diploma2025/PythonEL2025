@@ -6,6 +6,10 @@ def area(number1):
     Write a Python program which accepts the radius of a circle from the argument
     and compute the area. Don't forget to return the result at the end.
     """
+    pi= 3.141592653589793
+    result = pi*(number1**2)
+    return result
+
 
 
 if __name__ == "__main__":

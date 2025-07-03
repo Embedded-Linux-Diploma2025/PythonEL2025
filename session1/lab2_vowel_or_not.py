@@ -2,7 +2,11 @@
 
 
 def vowel(letter):
+    vowels_list  = ["a","A","e","E","i","I","O","o","u","U"]
     """Write your solution here. Don't forget to return the result at the end."""
+    for x in letter: 
+        if x in vowels_list: 
+            return True
 
 
 if __name__ == "__main__":
