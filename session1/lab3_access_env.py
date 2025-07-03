@@ -8,6 +8,7 @@ def access_env(env_var):
     return os.getenv(env_var)
 
 
+
 if __name__ == "__main__":
     os.environ["TEST1234"] = "test_value"
     os.environ["TEST1235"] = "test_value2"
