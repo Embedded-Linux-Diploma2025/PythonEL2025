@@ -2,10 +2,12 @@
 
 import requests
 
-
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
+    url = requests.get("https://api.ipify.org/?format=json", timeout=10)
 
+    url2= requests.get(f"https://ipinfo.io/{url.json()['ip']}/geo", timeout=10)
+    return url2.json()
 
 if __name__ == "__main__":
     location_info = get_info_location()
