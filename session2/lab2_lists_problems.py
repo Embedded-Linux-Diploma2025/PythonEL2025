@@ -54,11 +54,11 @@ def list_statistics(numbers):
         dict: Dictionary with sum, average, count
     """
     # Write your solution here
-    sum=0
+    s_=0
     for i in numbers:
-        sum+=i
-        print(sum)
-    return {"sum": sum, "average": sum/len(numbers), "count": len(numbers)}
+        s_+=i
+        print(s_)
+    return {"sum": s_, "average": s_/len(numbers), "count": len(numbers)}
 
 
 def flatten_nested_list(nested_list):
