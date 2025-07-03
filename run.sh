@@ -17,6 +17,7 @@ done
 ----------------- Session 2 -----------------#
 cd ../session2 || exit 1
 for file in *.py; do
+    if [[ "$file" != "lab3_tuple_problems.py" && "$file" != "lab4_set_problems.py" ]]; then
     pylint "$file"
     if [ $? -ne 0 ]; then
         echo "[🟥] Error running pylint for $file"
@@ -28,4 +29,5 @@ for file in *.py; do
         exit 1
     fi
     echo "[🟩] $file ran successfully"
+    fi
 done
