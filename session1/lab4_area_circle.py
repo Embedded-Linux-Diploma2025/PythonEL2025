@@ -8,7 +8,6 @@ def area(number1):
     """
     return math.pi*number1*number1
 
-
 if __name__ == "__main__":
     assert area(2) == 12.566370614359172, "Test case failed"
     assert area(1) == 3.141592653589793, "Test case failed"
