@@ -3,7 +3,7 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
-    number = int(input("enter the number to calculate accumlative value: "))
+    # number = int(input("enter the number to calculate accumlative value: "))
     accu = 0
     i = 1
     while i <= number:
