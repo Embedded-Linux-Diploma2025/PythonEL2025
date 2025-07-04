@@ -3,9 +3,9 @@
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end...."""
-    given_list  = list(map(int, input("Please give a list with a space: ").split()))
+    lst  = list(map(int, input("Please give a list with a space: ").split()))
     counter = 0
-    for i in given_list :
+    for i in lst:
         if i == 4:
             counter+=1
     print(counter)
