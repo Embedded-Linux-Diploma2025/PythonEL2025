@@ -5,6 +5,11 @@ import requests
 
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
+    my_ip= requests.get("https://api.ipify.org/?format=json", timeout=10) #get ip address
+    jmy_ip=my_ip.json()     #convert response to json
+    str_ip=str(jmy_ip['ip']) #strigify ip value
+    info=requests.get(f"https://ipinfo.io/{str_ip}/geo", timeout=10)
+    return info.json()
 
 
 if __name__ == "__main__":
