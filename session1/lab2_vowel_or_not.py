@@ -3,7 +3,7 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    letter = input("please enter a letter to check if it is vowel or not:  ")
+    # letter = input("please enter a letter to check if it is vowel or not:  ")
     vowel_letters = ('a', 'e', 'o', 'u', 'i')
     result: bool = False
     if letter.lower() in vowel_letters:
