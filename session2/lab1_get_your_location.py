@@ -1,10 +1,17 @@
 """Write a Python program to get info about your location."""
 
+# TODO: solve
+
 import requests
 
 
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
+    response = requests.get("https://ipapi.co/json/")
+    response.raise_for_status()
+    data = response.json()
+    data["loc"] = None
+    return data
 
 
 if __name__ == "__main__":
