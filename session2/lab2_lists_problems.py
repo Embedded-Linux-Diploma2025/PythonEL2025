@@ -1,5 +1,5 @@
 """List Problems - Testing student capability with list operations."""
-
+from functools import reduce
 
 def find_max_min(numbers):
     """Find the maximum and minimum values in a list of numbers.
@@ -11,6 +11,15 @@ def find_max_min(numbers):
         tuple: (max_value, min_value)
     """
     # Write your solution here
+    l=len(numbers)
+    max_value=numbers[0]
+    min_value=numbers[0]
+    for i in range(l):
+        if numbers[i]>max_value:
+            max_value=numbers[i]
+        if numbers[i]<min_value:
+            min_value=numbers[i]
+    return (max_value,min_value)
 
 
 def reverse_list(items):
@@ -23,6 +32,14 @@ def reverse_list(items):
         list: Reversed list
     """
     # Write your solution here
+    i = 0
+    j = len(items) - 1
+    k = len(items) // 2
+    for i in range(k):
+        swap = items[j - i]
+        items[j - i] = items[i]
+        items[i] = swap
+    return items
 
 
 def list_statistics(numbers):
@@ -35,7 +52,12 @@ def list_statistics(numbers):
         dict: Dictionary with sum, average, count
     """
     # Write your solution here
-
+    summ=0
+    count = len(numbers)
+    for i in numbers:
+        summ+=i
+    average=summ/len(numbers)
+    return {"sum" : summ, "average" : average , "count" : count}
 
 def flatten_nested_list(nested_list):
     """Flatten a nested list structure.
@@ -47,6 +69,10 @@ def flatten_nested_list(nested_list):
         list: Flattened list
     """
     # Write your solution here
+
+    return list(reduce(lambda x, y: x + y, nested_list, []))
+
+
 
 
 if __name__ == "__main__":

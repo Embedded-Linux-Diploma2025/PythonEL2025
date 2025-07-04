@@ -5,8 +5,8 @@ import requests
 
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
-
-
+    info = requests.get("https://ipinfo.io/json",timeout=5)
+    return info.json()
 if __name__ == "__main__":
     location_info = get_info_location()
     assert "ip" in location_info, "Test case failed"
