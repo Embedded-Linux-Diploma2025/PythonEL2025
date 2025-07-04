@@ -25,7 +25,7 @@ examine_session "session1"
 python session2/lab1_get_your_location.py
 if [ $? -ne 0 ]; then
     echo "[🟥] Session 2 is not Solved yet"
-    exit 1 # Uncomment this line if you want to bypass session2
+    exit 1
 else
     examine_session "session2"
 fi
