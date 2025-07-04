@@ -15,7 +15,7 @@ def get_info_location():
     ip = r.compile(r'Address: (\d+\.\d+\.\d+\.\d+)').search(info).group(1)
     url = requests.get(f"https://ipinfo.io/{ip}/geo", timeout=10)
 
-    return url.json()  
+    return url.json()
 
 if __name__ == "__main__":
     location_info = get_info_location()
