@@ -11,6 +11,11 @@ def find_max_min(numbers):
         tuple: (max_value, min_value)
     """
     # Write your solution here
+    minimum, maximum = None, None
+    if len(numbers):
+        maximum = max(numbers)
+        minimum = min(numbers)
+    return (maximum, minimum)
 
 
 def reverse_list(items):
@@ -23,6 +28,8 @@ def reverse_list(items):
         list: Reversed list
     """
     # Write your solution here
+    ret = items[::-1]
+    return ret
 
 
 def list_statistics(numbers):
@@ -35,6 +42,16 @@ def list_statistics(numbers):
         dict: Dictionary with sum, average, count
     """
     # Write your solution here
+    ret = {
+        "sum": None,
+        "average": None,
+        "count": None,
+    }
+    ret["count"] = len(numbers)
+    if ret["count"]:
+        ret["sum"] = sum(numbers)
+        ret["average"] = ret["sum"] / ret['count']
+    return ret
 
 
 def flatten_nested_list(nested_list):
@@ -47,6 +64,12 @@ def flatten_nested_list(nested_list):
         list: Flattened list
     """
     # Write your solution here
+    # from iteration_utilities import deepflatten
+    # return list(deepflatten(nested_list))
+    ret = []
+    for lst in nested_list:
+        ret.extend(lst)
+    return ret
 
 
 if __name__ == "__main__":
@@ -66,6 +89,7 @@ if __name__ == "__main__":
 
     print("Testing flatten_nested_list...")
     result = flatten_nested_list([[1, 2], [3, 4], [5, 6]])
-    assert result == [1, 2, 3, 4, 5, 6], f"Expected [1, 2, 3, 4, 5, 6], got {result}"
+    assert result == [1, 2, 3, 4, 5,
+                      6], f"Expected [1, 2, 3, 4, 5, 6], got {result}"
 
     print("All tests passed!")
