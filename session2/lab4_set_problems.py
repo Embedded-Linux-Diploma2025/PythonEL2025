@@ -12,8 +12,11 @@ def set_operations(set1: set, set2: set):
         dict: Dictionary with union, intersection, difference
     """
     # Write your solution here
-
-
+    dic_res:dict = {
+        "union" : set1.union(set2),
+        "intersection" : set1.intersection(set2)
+    }
+    return dic_res
 def find_unique_elements(list1, list2):
     """Find elements that are unique to each list using sets.
 
@@ -25,7 +28,11 @@ def find_unique_elements(list1, list2):
         tuple: (unique_to_list1, unique_to_list2)
     """
     # Write your solution here
-
+    dic_res:dict = {
+        0 : set(list1).difference(set(list2)),
+        1 : set(list2).difference(set(list1))
+    }
+    return dic_res
 
 def remove_vowels_set(text):
     """Remove vowels from text using set operations.
@@ -37,8 +44,12 @@ def remove_vowels_set(text):
         str: Text with vowels removed
     """
     # Write your solution here
-
-
+    textaslist = list(text)
+    vowels= "aeiouAEIOU"
+    for char in text:
+        if char in vowels:
+            textaslist.remove(char)
+    return str(textaslist)
 if __name__ == "__main__":
     # Test cases
     print("Testing set_operations...")
@@ -53,7 +64,7 @@ if __name__ == "__main__":
 
     print("Testing remove_vowels_set...")
     RESULT = remove_vowels_set("Hello World")
-    assert "a" not in RESULT.lower(), "Vowels should be removed"
+    assert "e" not in RESULT.lower(), "Vowels should be removed"
     assert "H" in RESULT and "l" in RESULT, "Consonants should remain"
 
     print("Testing find_common_friends...")
