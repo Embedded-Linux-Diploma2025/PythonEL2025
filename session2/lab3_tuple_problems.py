@@ -71,7 +71,7 @@ if __name__ == "__main__":
     assert result == (20, 9, 1, 5), f"Expected (20, 9, 1, 5), got {result}"
 
     print("Testing count_elements_in_tuple...")
-    result = count_elements_in_tuple((1, 2, 3, 2, 4, 2), 2)
+    result = count_elements_in_tuple((1, 2, 3, 2, 4, 2), 2) # pylint: disable=invalid-name
     assert result == 3, f"Expected 3, got {result}"
 
     print("Testing tuple_indexing_slicing...")
