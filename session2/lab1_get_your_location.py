@@ -4,7 +4,23 @@ import requests
 
 
 def get_info_location():
-    """Write your solution here. Don't forget to return the result at the end."""
+    """Gets location information based on public IP address.
+
+    Uses the ipinfo.io API to fetch location data.
+
+    Returns:
+        dict: A dictionary containing location information such as
+              ip, city, region, country, etc. Returns an empty
+              dictionary if the request fails.
+    """
+    try:
+        response = requests.get("https://ipinfo.io/json", timeout=5)
+        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
+        # print(response.json())
+        return response.json()
+    except requests.exceptions.RequestException as exception:
+        print(f"Error fetching location data: {exception}")
+        return {}
 
 
 if __name__ == "__main__":
