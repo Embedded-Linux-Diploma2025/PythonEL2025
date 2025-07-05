@@ -55,7 +55,7 @@ def remove_vowels_set(text):
     vowels_set = {'a','e','i','o','u','A','E','I','O','U'}
     non_vowels_set = set1.difference(vowels_set)
     text2 = ''.join(non_vowels_set)
-    return text
+    return text2
 
 if __name__ == "__main__":
     # Test cases
