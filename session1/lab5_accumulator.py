@@ -2,7 +2,8 @@
 
 
 def compute(number):
-    """write your soulution Here Sum 1 … n — Compute and display the running total."""
+    """ sum of 1 to n = n(n+1)/2 """
+    return number * ( number + 1) / 2
 
 
 if __name__ == "__main__":

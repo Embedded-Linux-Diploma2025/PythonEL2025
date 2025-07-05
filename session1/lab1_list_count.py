@@ -2,7 +2,9 @@
 
 
 def count(lst):
-    """Write your solution here. Don't forget to return the result at the end...."""
+    """ cReturn the number of 4’s in lst  """
+    cnt = [1 for i in range(len(lst)) if lst[i] == 4]
+    return len(cnt)
 
 
 if __name__ == "__main__":

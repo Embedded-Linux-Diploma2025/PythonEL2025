@@ -4,7 +4,10 @@ import requests
 
 
 def get_info_location():
-    """Write your solution here. Don't forget to return the result at the end."""
+    """ Fetches information about the current IP address location """
+    url = requests.get("https://api.ipify.org/?format=json", timeout=5)
+    api = url.json()
+    return requests.get(f"https://ipinfo.io/{api['ip']}/geo", timeout=5).json()
 
 
 if __name__ == "__main__":

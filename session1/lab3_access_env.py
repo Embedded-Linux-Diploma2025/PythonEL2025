@@ -4,7 +4,9 @@ import os
 
 
 def access_env(env_var):
-    """Write your solution here. Don't forget to return the result at the end."""
+    """take  environment variable name and returns its value using the os.environ dictionary"""
+    return os.environ[env_var]
+
 
 
 if __name__ == "__main__":
