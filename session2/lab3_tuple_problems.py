@@ -12,7 +12,8 @@ def tuple_operations(tuple1, tuple2):
         dict: Dictionary with concatenation, repetition,
     """
     # Write your solution here
-
+    diic={"concatenation": tuple1+tuple2, "repetition": tuple1+tuple1}
+    return diic
 
 def find_tuple_stats(numbers_tuple):
     """Calculate statistics for a tuple of numbers.
@@ -24,7 +25,14 @@ def find_tuple_stats(numbers_tuple):
         tuple: (sum, max, min, length)
     """
     # Write your solution here
-
+    t_sum=0
+    for i in numbers_tuple:
+        t_sum+=i
+    sort_tup=sorted(numbers_tuple)
+    max_tup=sort_tup[-1]
+    min_tup=sort_tup[0]
+    len_tup=len(numbers_tuple)
+    return (t_sum,max_tup,min_tup,len_tup)
 
 def count_elements_in_tuple(data_tuple, element):
     """Count occurrences of an element in a tuple.
@@ -37,6 +45,7 @@ def count_elements_in_tuple(data_tuple, element):
         int: Number of occurrences
     """
     # Write your solution here
+    return data_tuple.count(element)
 
 
 def tuple_indexing_slicing(data_tuple):
@@ -49,7 +58,16 @@ def tuple_indexing_slicing(data_tuple):
         dict: Dictionary with various slicing results
     """
     # Write your solution here
+    return {"first_element" : data_tuple[0],"last_element":data_tuple[-1]}
 
+result = tuple_operations((1, 2, 3), (3, 4, 5))
+print(result)
+result = find_tuple_stats((1, 5, 3, 9, 2))
+print(result)
+result = count_elements_in_tuple((1, 2, 3, 2, 4, 2), 2)
+print(result)
+result = tuple_indexing_slicing((0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+print(result)
 
 if __name__ == "__main__":
     # Test cases
