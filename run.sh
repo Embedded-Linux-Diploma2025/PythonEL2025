@@ -20,7 +20,7 @@ examine_session() {
 }
 
 #----------------- Session 1 -----------------#
-examine_session "session1"
+#examine_session "session1"
 #----------------- Session 2 -----------------#
 python session2/lab1_get_your_location.py
 if [ $? -ne 0 ]; then
