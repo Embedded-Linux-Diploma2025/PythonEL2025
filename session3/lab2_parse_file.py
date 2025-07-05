@@ -1,6 +1,7 @@
 """File Parsing Problems - Testing student capability with file parsing and text processing."""
 
 import os
+import re
 
 
 def parse_config_file(file_path):
@@ -17,6 +18,23 @@ def parse_config_file(file_path):
     pattern = r'^([A-Z_][A-Z0-9_:${}]*)\s*=\s*"([^"]*(?:\\[\s\S]*?)*)"'
 
     """
+    config_data = {}
+    # This regex pattern is designed to capture KEY = "value" formats.
+    pattern = re.compile(r'^([A-Z_][A-Z0-9_:${}]*)\s*=\s*"([^"]*)"')
+
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            for line in f:
+                # Strip whitespace from the line to ensure the pattern matches at the start
+                clean_line = line.strip()
+                match = pattern.match(clean_line)
+                if match:
+                    # match.groups() returns a tuple of all captured groups: (key, value)
+                    key, value = match.groups()
+                    config_data[key] = value
+    except FileNotFoundError:
+        return {}  # Return empty dict if file doesn't exist
+    return config_data
 
 
 if __name__ == "__main__":
