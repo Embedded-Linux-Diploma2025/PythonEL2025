@@ -2,7 +2,14 @@
 
 
 def count(lst):
-    """Write your solution here. Don't forget to return the result at the end...."""
+    """Write your solution here. Don't forget to return the result at the end."""
+    return lst.count(4)
+print(count([1,2,3,4,5,4,6]))
+print(count([1, 2, 3, 5, 6]))
+print(count([4, 4, 4, 4]))
+print(count([]))
+print(count([4,5,6,7,8]))
+print(count([1,2,3,4,5,6,7,8,9,10]))
 
 
 if __name__ == "__main__":
