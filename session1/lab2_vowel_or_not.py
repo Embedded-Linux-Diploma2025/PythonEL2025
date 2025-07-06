@@ -2,9 +2,11 @@
 
 
 def vowel(letter):
-    """Write your solution here. Don't forget to return the result at the end."""
-
-
+    """Write your solution here. Don"t forget to return the result at the end."""
+    vols={"a","e","i","o","u","A","E","I","O","U"}
+    if letter in vols:
+        return letter
+    return None
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
     assert not vowel("b"), "Test case failed"

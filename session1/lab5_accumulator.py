@@ -3,6 +3,10 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
+    if number < 0:
+        raise ValueError("Invalid Number")
+    print (sum(range(number + 1)))
+    return sum(range(number + 1))
 
 
 if __name__ == "__main__":
