@@ -64,11 +64,4 @@ if __name__ == "__main__":
     assert "a" not in RESULT.lower(), "Vowels should be removed"
     assert "H" in RESULT and "l" in RESULT, "Consonants should remain"
 
-    print("Testing find_common_friends...")
-    friends = {
-        "Alice": {"Bob", "Charlie", "David"},
-        "Bob": {"Alice", "Charlie", "Eve"},
-        "Charlie": {"Alice", "Bob", "Frank"},
-    }
-
     print("All tests passed!")
