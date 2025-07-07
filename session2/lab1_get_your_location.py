@@ -10,9 +10,9 @@ def get_info_location():
     my_ip_dic = ip_response.json()
     my_ip = my_ip_dic['ip']
     get_loc_url = f"https://ipinfo.io/{my_ip}/geo"
-    location_reponse = requests.get(get_loc_url, timeout = 5)
-    my_location_dic = location_reponse.json()
-    return my_location_dic
+    location_timezone_reponse = requests.get(get_loc_url, timeout = 5)
+    my_location_timezone_dic = location_timezone_reponse.json()
+    return my_location_timezone_dic
 
 if __name__ == "__main__":
     location_info = get_info_location()
