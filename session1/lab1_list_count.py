@@ -3,7 +3,6 @@
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end."""
-    """Write your solution here. Don't forget to return the result at the end...."""
     numberof4 = 0
     for element in lst:
         if element == 4:
