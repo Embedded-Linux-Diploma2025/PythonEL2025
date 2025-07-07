@@ -2,11 +2,12 @@
 
 import requests
 
+TIME_OUT_DURATION = 5
 
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
     ip_url = "https://api.ipify.org/?format=json"
-    ip_response = requests.get(ip_url, timeout = 5)
+    ip_response = requests.get(ip_url, timeout = TIME_OUT_DURATION)
     my_ip_dic = ip_response.json()
     my_ip = my_ip_dic['ip']
     get_loc_url = f"https://ipinfo.io/{my_ip}/geo"
