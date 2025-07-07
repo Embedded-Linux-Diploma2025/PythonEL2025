@@ -2,7 +2,14 @@
 
 
 def count(lst):
-    """Write your solution here. Don't forget to return the result at the end...."""
+    """Write your solution here. Don't forget to return the result at the end."""
+    i=4
+    x=0
+    for i in lst:
+        if i == 4:
+            x += 1
+    return x
+
 
 
 if __name__ == "__main__":
