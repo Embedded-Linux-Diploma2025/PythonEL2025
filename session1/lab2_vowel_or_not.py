@@ -3,11 +3,8 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-    vowel_list =["A","E","I","O","U","a","e","i","o","u"]
-    is_vowel =False
-    if letter in vowel_list :
-      is_vowel=True 
-    return is_vowel 
+    return letter.lower() in 'aeiou'
+
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"
