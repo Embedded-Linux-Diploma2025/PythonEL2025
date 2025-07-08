@@ -5,11 +5,11 @@ def count(lst):
     """Write your solution here. Don't forget to return the result at the end."""
     count_of_4=0
     for idx , val in enumerate(lst):
-        print(idx)
+        del idx
         if val==4:
             count_of_4+=1
-    print("Total Count is : ", {count_of_4})
-    print("End of count()")
+    # print("Total Count is : ", {count_of_4})
+    # print("End of count()")
     return count_of_4
 
 
