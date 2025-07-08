@@ -1,5 +1,4 @@
 """Write a Python program which accepts the radius of a circle and compute the area."""
-
 import math
 def area(number1):
     """
