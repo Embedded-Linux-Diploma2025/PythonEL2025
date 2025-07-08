@@ -12,7 +12,11 @@ def set_operations(set1: set, set2: set):
         dict: Dictionary with union, intersection, difference
     """
     # Write your solution here
-
+    union = set1.union(set2)
+    intersection = set1.intersection(set2)
+    difference = set1.difference(set2)
+    d = {"union":union,"intersection":intersection,"difference":difference}
+    return d
 
 def find_unique_elements(list1, list2):
     """Find elements that are unique to each list using sets.
@@ -25,6 +29,12 @@ def find_unique_elements(list1, list2):
         tuple: (unique_to_list1, unique_to_list2)
     """
     # Write your solution here
+    set1 = set(list1)
+    set2 = set(list2)
+    unique_1 = set1.difference(set2)
+    unique_2 = set2.difference(set1)
+    res = (unique_1,unique_2)
+    return res
 
 
 def remove_vowels_set(text):
@@ -37,6 +47,10 @@ def remove_vowels_set(text):
         str: Text with vowels removed
     """
     # Write your solution here
+    s = set(text)
+    vowels = {'a','e','i','o','u','A','E','I','O','U'}
+    res = s.difference(vowels)
+    return str(res)
 
 
 if __name__ == "__main__":
