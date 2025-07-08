@@ -1,11 +1,16 @@
 """Write a Python program which accepts the radius of a circle and compute the area."""
 
+import math
+
 
 def area(number1):
     """
     Write a Python program which accepts the radius of a circle from the argument
     and compute the area. Don't forget to return the result at the end.
     """
+    result = float(math.pi * math.pow(number1,2))
+    print(result)
+    return result
 
 
 if __name__ == "__main__":
