@@ -1,7 +1,7 @@
 """Dictionary Problems - Testing student capability with dictionary operations."""
 
 
-def dictionary_operations(dict1, dict2):
+def dictionary_operations(dict1:dict, dict2:dict):
     """Perform basic operations on two dictionaries.
 
     Args:
@@ -12,9 +12,27 @@ def dictionary_operations(dict1, dict2):
         dict: Dictionary with merged, common_keys, and unique_keys
     """
     # Write your solution here
+    d = dict1.copy()
+    d.update(dict2)
+
+    # d1={}
+    # for i in dict1.keys():
+    #     if i in dict2.keys():
+    #         d1[i] = dict1[i]
+
+    # d2={}
+    # for i in dict1.keys():
+    #     if i not in dict2.keys():
+    #         d2[i] = dict1[i]
+
+    return {
+        "merged": d,
+        "common_keys": dict1.keys() & dict2.keys() ,
+        "unique_keys": dict1.keys() ^ dict2.keys() ,
+    }
 
 
-def count_word_frequency(text):
+def count_word_frequency(text:str):
     """Count the frequency of each word in a text string.
 
     Args:
@@ -24,9 +42,14 @@ def count_word_frequency(text):
         dict: Dictionary with word frequencies
     """
     # Write your solution here
+    list_str = (text.strip()).split(' ')
+    set_str = set(list_str)
+    dic_str = {}
+    for i in set_str:
+        dic_str[i] = list_str.count(i)
+    return dic_str
 
-
-def dictionary_filtering(students_grades):
+def dictionary_filtering(students_grades:dict):
     """Filter students based on their grades.
 
     Args:
@@ -36,7 +59,10 @@ def dictionary_filtering(students_grades):
         dict: Dictionary with students who have grades >= 70
     """
     # Write your solution here
-
+    for i in students_grades.copy().keys():
+        if students_grades[i] < 70:
+            del students_grades[i]
+    return students_grades
 
 def nested_dictionary_access(nested_dict, keys_path):
     """Access value in nested dictionary using a list of keys.
@@ -49,6 +75,14 @@ def nested_dictionary_access(nested_dict, keys_path):
         any: Value at the specified path, or None if path doesn't exist
     """
     # Write your solution here
+    d = nested_dict
+    for i in keys_path:
+        if isinstance(d.get(i),dict):
+            d = d.get(i)
+        else:
+            d = d.get(i)
+            break
+    return d
 
 
 if __name__ == "__main__":
