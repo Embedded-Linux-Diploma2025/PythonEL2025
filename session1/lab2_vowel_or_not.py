@@ -3,7 +3,8 @@
 
 def vowel(letter):
     """Write your solution here. Don't forget to return the result at the end."""
-
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+    return letter.lower() in vowels
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"

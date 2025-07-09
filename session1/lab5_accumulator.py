@@ -3,6 +3,11 @@
 
 def compute(number):
     """write your soulution Here Sum 1 … n — Compute and display the running total."""
+    num = 0
+    ans = 0
+    while num <= number:
+        ans += num
+    return ans
 
 
 if __name__ == "__main__":
