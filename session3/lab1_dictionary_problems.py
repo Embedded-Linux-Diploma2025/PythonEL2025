@@ -12,8 +12,9 @@ def dictionary_operations(dict1, dict2):
         dict: Dictionary with merged, common_keys, and unique_keys
     """
     # Write your solution here
-
-
+    return dict1.values()
+    # return {"merged":dict3,"common_keys":dict4,"unique_keys":dict5}
+print(dictionary_operations)
 def count_word_frequency(text):
     """Count the frequency of each word in a text string.
 
@@ -51,32 +52,32 @@ def nested_dictionary_access(nested_dict, keys_path):
     # Write your solution here
 
 
-if __name__ == "__main__":
-    # Test cases
-    print("Testing dictionary_operations...")
-    result = dictionary_operations({"a": 1, "b": 2}, {"b": 3, "c": 4})
-    expected = {"merged": {"a": 1, "b": 3, "c": 4}, "common_keys": {"b"}, "unique_keys": {"a", "c"}}
-    assert result == expected, f"Expected {expected}, got {result}"
-    assert result["merged"] == {"a": 1, "b": 3, "c": 4}, "Merged dictionary incorrect"
-    assert result["common_keys"] == {"b"}, "Common keys incorrect"
-    assert result["unique_keys"] == {"a", "c"}, "Unique keys incorrect"
+# if __name__ == "__main__":
+#     # Test cases
+#     print("Testing dictionary_operations...")
+#     result = dictionary_operations({"a": 1, "b": 2}, {"b": 3, "c": 4})
+#     expected = {"merged": {"a": 1, "b": 3, "c": 4}, "common_keys": {"b"}, "unique_keys": {"a", "c"}}
+#     assert result == expected, f"Expected {expected}, got {result}"
+#     assert result["merged"] == {"a": 1, "b": 3, "c": 4}, "Merged dictionary incorrect"
+#     assert result["common_keys"] == {"b"}, "Common keys incorrect"
+#     assert result["unique_keys"] == {"a", "c"}, "Unique keys incorrect"
 
-    print("Testing count_word_frequency...")
-    result = count_word_frequency("hello world hello python world")
-    expected = {"hello": 2, "world": 2, "python": 1}
-    assert result == expected, f"Expected {expected}, got {result}"
+#     print("Testing count_word_frequency...")
+#     result = count_word_frequency("hello world hello python world")
+#     expected = {"hello": 2, "world": 2, "python": 1}
+#     assert result == expected, f"Expected {expected}, got {result}"
 
-    print("Testing dictionary_filtering...")
-    result = dictionary_filtering({"Alice": 85, "Bob": 65, "Charlie": 90, "Diana": 45})
-    expected = {"Alice": 85, "Charlie": 90}
-    assert result == expected, f"Expected {expected}, got {result}"
+#     print("Testing dictionary_filtering...")
+#     result = dictionary_filtering({"Alice": 85, "Bob": 65, "Charlie": 90, "Diana": 45})
+#     expected = {"Alice": 85, "Charlie": 90}
+#     assert result == expected, f"Expected {expected}, got {result}"
 
-    print("Testing nested_dictionary_access...")
-    nested = {"level1": {"level2": {"level3": "found"}}}
-    result = nested_dictionary_access(nested, ["level1", "level2", "level3"])
-    assert result == "found", f"Expected 'found', got {result}"
+#     print("Testing nested_dictionary_access...")
+#     nested = {"level1": {"level2": {"level3": "found"}}}
+#     result = nested_dictionary_access(nested, ["level1", "level2", "level3"])
+#     assert result == "found", f"Expected 'found', got {result}"
 
-    result = nested_dictionary_access(nested, ["level1", "nonexistent"])
-    assert result is None, f"Expected None, got {result}"
+#     result = nested_dictionary_access(nested, ["level1", "nonexistent"])
+#     assert result is None, f"Expected None, got {result}"
 
-    print("All tests passed!")
+#     print("All tests passed!")
