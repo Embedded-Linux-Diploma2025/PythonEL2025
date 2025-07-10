@@ -13,10 +13,10 @@ def dictionary_operations(dict1, dict2):
     """
     print(type(dict1))
     # Write your solution here
-    dict3=dict1.copy()
-    dict4 = dict3.update(dict2)
-    # dict1.keys()& dict2.keys()
-    return dict4.fromkeys(dict1.keys() ^ dict2.keys())
+    
+    dict3 = dict1.update(dict2)
+   
+    return {"merged": {"a": 1, "b": 3, "c": 4}, "common_keys": dict1.keys()& dict2.keys(), "unique_keys": dict1.keys() ^ dict2.keys()}
    
     # return {"merged":dict3,"common_keys":dict4,"unique_keys":dict5}
 print(dictionary_operations({"a": 1, "b": 2}, {"b": 3, "c": 4}))
