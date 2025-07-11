@@ -1,16 +1,18 @@
 """List Problems - Testing student capability with list operations."""
 
 
-def find_max_min(numbers):
+def find_max_min(numbers: list):
     """Find the maximum and minimum values in a list of numbers.
 
     Args:
         numbers (list): List of numbers
-
+        
+    
     Returns:
         tuple: (max_value, min_value)
     """
     # Write your solution here
+    return (max(numbers), min(numbers)) if numbers else (None, None)
 
 
 def reverse_list(items):
@@ -23,6 +25,7 @@ def reverse_list(items):
         list: Reversed list
     """
     # Write your solution here
+    return items[::-1]
 
 
 def list_statistics(numbers):
@@ -35,6 +38,10 @@ def list_statistics(numbers):
         dict: Dictionary with sum, average, count
     """
     # Write your solution here
+    count = len(numbers)
+    total = sum(numbers)
+    average = total / count if count > 0 else 0
+    return {"sum": total, "average": average, "count": count}
 
 
 def flatten_nested_list(nested_list):
@@ -47,6 +54,7 @@ def flatten_nested_list(nested_list):
         list: Flattened list
     """
     # Write your solution here
+    return [item for sublist in nested_list for item in sublist]
 
 
 if __name__ == "__main__":
