@@ -28,7 +28,7 @@ def find_unique_elements(list1, list2):
     Returns:
         tuple: (unique_to_list1, unique_to_list2)
     """
-    # Write your solution    
+    # Write your solution
     return (set(list1)-set(list2),set(list2)-set(list1))
 print(find_unique_elements([1, 2, 3, 4], [3, 4, 5, 6]))
 

@@ -30,10 +30,8 @@ def find_tuple_stats(numbers_tuple):
     min_=numbers_tuple[0]
     for i in numbers_tuple:
         s+=i
-        if max_<i  :
-            max_=i
-        if min_>i  :
-            min_=i
+        min_ = min(min_, i)
+        min_ = min(min_, i)
     return (s,max_,min_,len(numbers_tuple))
 
 def count_elements_in_tuple(data_tuple, element):
