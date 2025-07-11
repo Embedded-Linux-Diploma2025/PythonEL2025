@@ -18,8 +18,7 @@ def dictionary_operations(dict1, dict2):
    
     return {"merged": {"a": 1, "b": 3, "c": 4}, "common_keys": dict1.keys()& dict2.keys(), "unique_keys": dict1.keys() ^ dict2.keys()}
    
-    # return {"merged":dict3,"common_keys":dict4,"unique_keys":dict5}
-print(dictionary_operations({"a": 1, "b": 2}, {"b": 3, "c": 4}))
+ 
 def count_word_frequency(text):
     """Count the frequency of each word in a text string.
 
@@ -30,8 +29,13 @@ def count_word_frequency(text):
         dict: Dictionary with word frequencies
     """
     # Write your solution here
-
-
+    sp=text.split()
+    dict1 = {}
+    for s in sp:
+       sp.count(s)
+       dict1.update({s: sp.count(s)})
+    return dict1
+print(count_word_frequency("hello world hello python world"))
 def dictionary_filtering(students_grades):
     """Filter students based on their grades.
 
