@@ -3,6 +3,11 @@
 
 def count(lst):
     """Write your solution here. Don't forget to return the result at the end...."""
+    cnt=0
+    for val in lst:
+        if val==4:
+            cnt+=1
+    return cnt
 
 
 if __name__ == "__main__":
