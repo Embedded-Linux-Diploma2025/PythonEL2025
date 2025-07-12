@@ -6,7 +6,7 @@ import requests
 def get_info_location():
     """Write your solution here. Don't forget to return the result at the end."""
     url = requests.get("https://ipinfo.io/172.67.188.7/geo")
-    print(url.json())
+    return url.json()
 
 if __name__ == "__main__":
     location_info = get_info_location()
