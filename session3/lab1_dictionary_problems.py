@@ -12,6 +12,15 @@ def dictionary_operations(dict1, dict2):
         dict: Dictionary with merged, common_keys, and unique_keys
     """
     # Write your solution here
+    merged = dict(dict1)
+    merged.update(dict2)
+    common_keys = set(dict1.keys()) & set(dict2.keys())
+    unique_keys = (set(dict1.keys()) | set(dict2.keys())) - common_keys
+    return {
+        "merged":merged,
+        "common_keys":common_keys,
+        "unique_keys":unique_keys
+    }
 
 
 def count_word_frequency(text):
@@ -24,7 +33,12 @@ def count_word_frequency(text):
         dict: Dictionary with word frequencies
     """
     # Write your solution here
-
+    unique_words = set(text.split(" "))
+    res = {}
+    for word in unique_words:
+        word_count = text.count(word)
+        res[word] = word_count
+    return res
 
 def dictionary_filtering(students_grades):
     """Filter students based on their grades.
@@ -36,6 +50,11 @@ def dictionary_filtering(students_grades):
         dict: Dictionary with students who have grades >= 70
     """
     # Write your solution here
+    res = {}
+    for key,value in students_grades.items():
+        if value >= 70:
+            res[key] = value
+    return res
 
 
 def nested_dictionary_access(nested_dict, keys_path):
@@ -49,6 +68,13 @@ def nested_dictionary_access(nested_dict, keys_path):
         any: Value at the specified path, or None if path doesn't exist
     """
     # Write your solution here
+    current = nested_dict
+    for key in keys_path:
+        if isinstance(current, dict) and key in current:
+            current = current[key]
+        else:
+            return None
+    return current
 
 
 if __name__ == "__main__":
