@@ -12,10 +12,13 @@ def dictionary_operations(dict1 : dict, dict2):
         dict: Dictionary with merged, common_keys, and unique_keys
     """
     # Write your solution here
-    merge = dict1 | dict2
+    # merge = dict1.copy()
+    # merge.update(dict2)
+    dit1_copy = dict1.copy()
+    dit1_copy.update(dict2)
     common = set(dict1.keys()) & set(dict2.keys())
     unique = set(dict1.keys()) ^ set(dict2.keys())
-    return { "merged": merge , "common_keys":common , "unique_keys":unique}
+    return { "merged": dit1_copy , "common_keys":common , "unique_keys":unique}
 
 
 def count_word_frequency(text : str):
