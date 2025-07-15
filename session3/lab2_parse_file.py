@@ -28,7 +28,7 @@ def parse_config_file(file_path):
                 my_key=my_key[:-1]
                 # print("mykey",my_key,"mydata",mydata)
                 if my_key in dict_data:
-                    # print(dict_data)
+                    # print(dict_data) 
                     dict_data[my_key]=mydata[:-2]
     return dict_data
 
