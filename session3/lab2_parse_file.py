@@ -39,8 +39,8 @@ if __name__ == "__main__":
     # Test assertions
     print("Checking SUMMARY...")
     assert "SUMMARY" in result, "SUMMARY key not found in result"
-    m = " hello python",f"Expected ' hello python', got {result['SUMMARY']}"
-    assert result["SUMMARY"] == m
+    assert result["SUMMARY"] == " hello python",(
+    f"Expected ' hello python', got {result['SUMMARY']}")
 
     print("Checking LICENSE...")
     assert "LICENSE" in result, "LICENSE key not found in result"
