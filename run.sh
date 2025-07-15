@@ -29,5 +29,3 @@ if [ $? -ne 0 ]; then
 else
     examine_session "session2"
 fi
-
-
