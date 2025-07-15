@@ -17,6 +17,19 @@ def parse_config_file(file_path):
     pattern = r'^([A-Z_][A-Z0-9_:${}]*)\s*=\s*"([^"]*(?:\\[\s\S]*?)*)"'
 
     """
+    # file_path = './template_data.txt'
+    lines =[]
+    new_dict = {}
+
+    with open(file_path,'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    for i in lines:
+        if i.count('=') ==1:
+            ls = (i.replace('\n','')).split('=')
+            new_dict[ls[0].strip()]=((ls[1]).strip()).replace('"','')
+
+    return new_dict
 
 
 if __name__ == "__main__":
