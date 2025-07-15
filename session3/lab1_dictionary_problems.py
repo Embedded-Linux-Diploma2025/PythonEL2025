@@ -1,7 +1,7 @@
 """Dictionary Problems - Testing student capability with dictionary operations."""
 
 
-def dictionary_operations(dict1, dict2):
+def dictionary_operations(dict1 : dict, dict2):
     """Perform basic operations on two dictionaries.
 
     Args:
@@ -12,9 +12,13 @@ def dictionary_operations(dict1, dict2):
         dict: Dictionary with merged, common_keys, and unique_keys
     """
     # Write your solution here
+    merge = dict1 | dict2
+    common = set(dict1.keys()) & set(dict2.keys())
+    unique = set(dict1.keys()) ^ set(dict2.keys())
+    return { "merged": merge , "common_keys":common , "unique_keys":unique}
 
 
-def count_word_frequency(text):
+def count_word_frequency(text : str):
     """Count the frequency of each word in a text string.
 
     Args:
@@ -24,9 +28,17 @@ def count_word_frequency(text):
         dict: Dictionary with word frequencies
     """
     # Write your solution here
+    seen = set()
+    dic : dict = {}
+    for word in text.split() :
+        if word not in seen:
+            x = text.split().count(word)
+            seen.add(word)
+            dic[word] = x
+    return dic
 
 
-def dictionary_filtering(students_grades):
+def dictionary_filtering(students_grades : dict):
     """Filter students based on their grades.
 
     Args:
@@ -36,6 +48,11 @@ def dictionary_filtering(students_grades):
         dict: Dictionary with students who have grades >= 70
     """
     # Write your solution here
+    dic : dict = {}
+    for name in students_grades.keys():
+        if students_grades[name] >= 70:
+            dic[name] = students_grades[name]
+    return dic
 
 
 def nested_dictionary_access(nested_dict, keys_path):
@@ -49,6 +66,12 @@ def nested_dictionary_access(nested_dict, keys_path):
         any: Value at the specified path, or None if path doesn't exist
     """
     # Write your solution here
+    for key in keys_path:
+        if isinstance(nested_dict, dict) and key in nested_dict:
+            nested_dict = nested_dict[key]
+        else:
+            return None
+    return "found"
 
 
 if __name__ == "__main__":
