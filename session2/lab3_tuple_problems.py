@@ -1,19 +1,13 @@
 """Tuple Problems - Testing student capability with tuple operations."""
-
-
 def tuple_operations(tuple1, tuple2):
-    """Perform basic operations on two tuples.
-
-    Args:
-        tuple1 (tuple): First tuple
-        tuple2 (tuple): Second tuple
-
-    Returns:
-        dict: Dictionary with concatenation, repetition,
-    """
-    # Write your solution here
-
-
+    '''concatenation and repetition of 2 tuples to dictionary as return'''
+    dict1={
+    "concatenation":(),
+    "repetition":()
+    }
+    dict1['concatenation']=tuple1+tuple2
+    dict1["repetition"]=tuple1+tuple1
+    return dict1
 def find_tuple_stats(numbers_tuple):
     """Calculate statistics for a tuple of numbers.
 
@@ -23,9 +17,7 @@ def find_tuple_stats(numbers_tuple):
     Returns:
         tuple: (sum, max, min, length)
     """
-    # Write your solution here
-
-
+    return (sum(numbers_tuple),max(numbers_tuple),min(numbers_tuple),len(numbers_tuple))
 def count_elements_in_tuple(data_tuple, element):
     """Count occurrences of an element in a tuple.
 
@@ -36,9 +28,7 @@ def count_elements_in_tuple(data_tuple, element):
     Returns:
         int: Number of occurrences
     """
-    # Write your solution here
-
-
+    return data_tuple.count(element)
 def tuple_indexing_slicing(data_tuple):
     """Demonstrate tuple indexing and slicing operations.
 
@@ -48,9 +38,8 @@ def tuple_indexing_slicing(data_tuple):
     Returns:
         dict: Dictionary with various slicing results
     """
-    # Write your solution here
-
-
+    return {"first_element":data_tuple[0],
+            "last_element":data_tuple[-1]}
 if __name__ == "__main__":
     # Test cases
     print("Testing tuple_operations...")

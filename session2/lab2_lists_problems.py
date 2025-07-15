@@ -1,54 +1,33 @@
 """List Problems - Testing student capability with list operations."""
-
-
 def find_max_min(numbers):
-    """Find the maximum and minimum values in a list of numbers.
-
-    Args:
-        numbers (list): List of numbers
-
-    Returns:
-        tuple: (max_value, min_value)
-    """
-    # Write your solution here
-
-
+    """max and min of list"""
+    return max(numbers),min(numbers)
 def reverse_list(items):
-    """Reverse a list without using built-in reverse() method.
-
-    Args:
-        items (list): List to reverse
-
-    Returns:
-        list: Reversed list
-    """
-    # Write your solution here
-
-
+    """reverse of list"""
+    return items[::-1]
 def list_statistics(numbers):
-    """Calculate basic statistics for a list of numbers.
-
-    Args:
-        numbers (list): List of numbers
-
-    Returns:
-        dict: Dictionary with sum, average, count
-    """
-    # Write your solution here
-
-
+    """sum avg count of list"""
+    if len(numbers)==0:
+        return{
+            "sum": 0,
+            "average": 0,
+            "count": 0
+        }
+    list_count=len(numbers)
+    total=sum(numbers)
+    avg=total/list_count
+    return{
+        "sum": total,
+        "average": avg,
+        "count": list_count
+    }
 def flatten_nested_list(nested_list):
-    """Flatten a nested list structure.
-
-    Args:
-        nested_list (list): List containing sublists
-
-    Returns:
-        list: Flattened list
-    """
-    # Write your solution here
-
-
+    """flattens nested list"""
+    flatten_lst=[]
+    for sublist in nested_list:
+        for num in sublist:
+            flatten_lst.append(num)
+    return flatten_lst
 if __name__ == "__main__":
     # Test cases
     print("Testing find_max_min...")

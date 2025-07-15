@@ -1,6 +1,4 @@
 """Set Problems - Testing student capability with set operations."""
-
-
 def set_operations(set1: set, set2: set):
     """Perform basic set operations on two sets.
 
@@ -11,9 +9,11 @@ def set_operations(set1: set, set2: set):
     Returns:
         dict: Dictionary with union, intersection, difference
     """
-    # Write your solution here
-
-
+    return {
+        "union":set1.union(set2),
+        "intersection":set1.intersection(set2),
+        "difference":set1.difference(set2)
+    }
 def find_unique_elements(list1, list2):
     """Find elements that are unique to each list using sets.
 
@@ -24,9 +24,7 @@ def find_unique_elements(list1, list2):
     Returns:
         tuple: (unique_to_list1, unique_to_list2)
     """
-    # Write your solution here
-
-
+    return (set(list1).difference(set(list2)),set(list2).difference(set(list1)))
 def remove_vowels_set(text):
     """Remove vowels from text using set operations.
 
@@ -36,9 +34,8 @@ def remove_vowels_set(text):
     Returns:
         str: Text with vowels removed
     """
-    # Write your solution here
-
-
+    translation_table=str.maketrans("","","AEIOUaeiou")
+    return text.translate(translation_table)
 if __name__ == "__main__":
     # Test cases
     print("Testing set_operations...")
