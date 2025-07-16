@@ -18,7 +18,7 @@ def parse_config_file(file_path):
 
     """
     data = {}
-    with open(file_path, "r") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
         for line in lines:
             if '=' in line:
