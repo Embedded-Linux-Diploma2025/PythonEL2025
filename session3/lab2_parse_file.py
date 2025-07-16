@@ -17,6 +17,17 @@ def parse_config_file(file_path):
     pattern = r'^([A-Z_][A-Z0-9_:${}]*)\s*=\s*"([^"]*(?:\\[\s\S]*?)*)"'
 
     """
+    data = {}
+    with open(file_path, "r") as f:
+        lines = f.readlines()
+        for line in lines:
+            if '=' in line:
+                line = line.strip()
+                key, value = line.split('=', 1)
+                key = key.strip().strip('"')
+                value = value.strip().strip('"')
+                data[key] = value
+    return data
 
 
 if __name__ == "__main__":
