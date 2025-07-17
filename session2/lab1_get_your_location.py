@@ -28,4 +28,4 @@ if __name__ == "__main__":
     assert "country" in location_info, "Test case failed"
     assert "loc" in location_info, "Test case failed"
     assert "org" in location_info, "Test case failed"
-    # print("ALL Tests Has Passed")
+    print("ALL Tests Has Passed")
