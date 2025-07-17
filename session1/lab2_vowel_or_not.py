@@ -2,8 +2,14 @@
 
 
 def vowel(letter):
-    """Write your solution here. Don't forget to return the result at the end."""
+    """ This Function is an if in loop to determine whether the Letter is Vowel or not """
+    #"""Write your solution here. Don't forget to return the result at the end."""
+    if letter in" aAeEiIoOuU":
+        return True
+    return False
 
+print(vowel("a"))
+print(vowel("b"))
 
 if __name__ == "__main__":
     assert vowel("a"), "Test case failed"

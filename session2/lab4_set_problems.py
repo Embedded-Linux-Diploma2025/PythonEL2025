@@ -12,6 +12,12 @@ def set_operations(set1: set, set2: set):
         dict: Dictionary with union, intersection, difference
     """
     # Write your solution here
+    unio=set1.union(set2)
+    inter =set1.intersection(set2)
+    diff=set1.difference(set2)
+    print(diff)
+    diic={"union":unio,"intersection":inter,"difference":diff}
+    return diic
 
 
 def find_unique_elements(list1, list2):
@@ -25,7 +31,12 @@ def find_unique_elements(list1, list2):
         tuple: (unique_to_list1, unique_to_list2)
     """
     # Write your solution here
-
+    set1=set(list1)
+    set2=set(list2)
+    uniq1=set1.difference(set2)
+    uniq2=set2.difference(set1)
+    # tupp=(uniq1,uniq2)
+    return (uniq1,uniq2)
 
 def remove_vowels_set(text):
     """Remove vowels from text using set operations.
@@ -37,6 +48,19 @@ def remove_vowels_set(text):
         str: Text with vowels removed
     """
     # Write your solution here
+    vowels={"a","e","i","o","u"}
+    vowel=str(vowels)
+    remove=str.maketrans("","",vowel)
+    return text.translate(remove)
+
+result = set_operations({1, 2, 3, 4}, {3, 4, 5, 6})
+print(result)
+result = find_unique_elements([1, 2, 3, 4], [3, 4, 5, 6])
+print(result[0])
+print(result[1])
+result = remove_vowels_set("Hello World")
+print(result)
+
 
 
 if __name__ == "__main__":
@@ -45,6 +69,7 @@ if __name__ == "__main__":
     result = set_operations({1, 2, 3, 4}, {3, 4, 5, 6})
     assert result["union"] == {1, 2, 3, 4, 5, 6}, "Union test failed"
     assert result["intersection"] == {3, 4}, "Intersection test failed"
+    assert result["difference"] == {1,2} , "Difference test failed"
 
     print("Testing find_unique_elements...")
     result = find_unique_elements([1, 2, 3, 4], [3, 4, 5, 6])
