@@ -20,4 +20,4 @@ if __name__ == "__main__":
     assert compute(2) == 3, "Test case failed"
     assert compute(3) == 6, "Test case failed"
     assert compute(4) == 10, "Test case failed"
-  
+    print("All test cases passed!")
